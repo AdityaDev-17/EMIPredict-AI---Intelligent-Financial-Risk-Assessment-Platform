@@ -1,0 +1,41 @@
+{
+  "classification": {
+    "metrics": [
+      {"model": "Logistic Regression", "accuracy": 0.835, "macro_precision": 0.696, "macro_recall": 0.813, "macro_f1": 0.689, "roc_auc": 0.956},
+      {"model": "Random Forest", "accuracy": 0.906, "macro_precision": 0.730, "macro_recall": 0.822, "macro_f1": 0.751, "roc_auc": 0.971},
+      {"model": "XGBoost", "accuracy": 0.934, "macro_precision": 0.791, "macro_recall": 0.927, "macro_f1": 0.822, "roc_auc": 0.991}
+    ],
+    "per_class_f1_xgboost": {"Eligible": 0.94, "High_Risk": 0.56, "Not_Eligible": 0.97},
+    "top_features": [
+      {"feature": "log_loan_to_income_ratio", "importance": 0.117},
+      {"feature": "requested_tenure", "importance": 0.114},
+      {"feature": "loan_to_income_ratio", "importance": 0.113},
+      {"feature": "disposable_income", "importance": 0.110},
+      {"feature": "expense_to_income_ratio", "importance": 0.094},
+      {"feature": "log_expense_to_income_ratio", "importance": 0.088},
+      {"feature": "requested_amount", "importance": 0.076},
+      {"feature": "monthly_salary", "importance": 0.028},
+      {"feature": "risk_score", "importance": 0.020},
+      {"feature": "bank_balance", "importance": 0.017}
+    ],
+    "selected_model": "XGBoost",
+    "target_met": "Accuracy > 90% (achieved 93.4%)"
+  },
+  "regression": {
+    "metrics": [
+      {"model": "Linear Regression", "rmse": 4030.12, "mae": 2876.78, "r2": 0.732, "mape": 194.48},
+      {"model": "Random Forest", "rmse": 939.96, "mae": 356.71, "r2": 0.985, "mape": 6.60},
+      {"model": "XGBoost", "rmse": 667.85, "mae": 265.84, "r2": 0.993, "mape": 8.29}
+    ],
+    "top_features": [
+      {"feature": "disposable_income", "importance": 0.835},
+      {"feature": "risk_score", "importance": 0.052},
+      {"feature": "monthly_salary", "importance": 0.047},
+      {"feature": "bank_balance", "importance": 0.018},
+      {"feature": "credit_risk_component", "importance": 0.010},
+      {"feature": "credit_score", "importance": 0.009}
+    ],
+    "selected_model": "XGBoost",
+    "target_met": "RMSE < 2000 INR (achieved 667.85)"
+  }
+}
